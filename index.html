@@ -34,18 +34,8 @@ var vlSpec = {
           {"field": "Horsepower", "type": "quantitative"},
           {"field": "Weight_in_lbs", "type": "quantitative"}
         ],
-        "opacity":{
-          "condition":{
-            "selection":"click"
-          },
-          "value": 0.2
-        },
-        "color":{
-          "condition":{
-            "selection":"click"
-          },
-          "value":"grey"
-        }
+        "opacity": {"condition": {"selection": "click"}, "value": 0.2},
+        "color": {"condition": {"selection": "click"}, "value": "grey"}
       }
     },
     {
@@ -55,8 +45,8 @@ var vlSpec = {
           "encoding": {
             "x": {"field": "Horsepower", "type": "quantitative"},
             "y": {"field": "Weight_in_lbs", "type": "quantitative"},
-            "color":{"value":"grey"},
-            "opacity":{"value": 0.2}
+            "color": {"value": "grey"},
+            "opacity": {"value": 0.2}
           }
         },
         {
@@ -70,7 +60,7 @@ var vlSpec = {
       ]
     }
   ]
-}
+};
   vegaEmbed('#viz', vlSpec);
   </script>
   </body>
