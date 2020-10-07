@@ -7,20 +7,22 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
   </head>
   <body>
-      <p>
-      Here's my first paragraph!
-      </p>
-      <p>
-      This is an example paragraph. Anything in the <strong>body</strong>
-      tag will appear on the page, just like this <strong>p</strong>
-      tag and its contents.
-      </p>
-      <div id="viz">
+      <div class="container">
+        <h1>Vega-Lite Visualization</h1>
+        <div class="content">
+          <h3>This is my first data visualization web page. </h3>
+          <p>
+            Try to select <strong>bar</strong> in the left figure.
+            You can press <strong><em>shift</em></strong> to select multiple bars.
+          </p>
+          <div id="viz">
+          </div>
+        </div>
       </div>
       <script>
 var vlSpec = {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "data": {"url": "data/cars.json"},
+  "data": {"url": "https://vega.github.io/editor/data/cars.json"},
   "hconcat": [
     {
       "mark": {"type": "bar"},
@@ -65,3 +67,19 @@ var vlSpec = {
   </script>
   </body>
 </html>
+<style>
+  body{
+    background-color: #e6e6ea;
+  }
+  .container{
+    text-align: center;
+    background-color: #fff;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  .content{
+    padding-top: 20px;
+  }
+</style>
